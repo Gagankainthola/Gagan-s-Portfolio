@@ -15,18 +15,18 @@ function LeetCodeIcon({ className = "w-6 h-6" }) {
 function App() {
   const projects = [
     {
-      title: "LearnFlow AI-Powered Learning Platform",
+      title: "LearnFlow - AI-Powered Learning Platform",
       description: "Built an AI-driven course generation platform using Next.js and Drizzle ORM, serving 500+ users with automated contentcreation.Integrated Gemini API for intelligent content generation, reducing manual course creation effort by 60%.Established Clerk authentication with Google OAuth for secure, role-based access control.Optimized media storage with Cloudinary integration, reducing costs by 40% while improving performance.",
       tech: ["Next.js", "Drizzle ORM", "Gemini API", "Clerk", "Cloudinary", "PostgreSQL"],
-      link: "https://github.com/Gagankainthola/LearnFlow?tab=readme-ov-file",
-      github: "https://github.com/Gagankainthola/LearnFlow?tab=readme-ov-file"
+      link: "https://learn-flow-eight.vercel.app/",
+      github: "https://github.com/Gagankainthola/LearnFlow"
     },
     {
-      title: "TeleLegal - WebRTC Video Communication Platform",
-      description: "Developed real-time peer-to-peer video platform using WebRTC with UDP-based media transmission for camera, micro-phone, and screen sharing.Architected Socket.IO for TCP-based signaling and RTCPeerConnection for direct browser-to-browser communication.Engineered JWT-based role authentication system with granular access control for clients, lawyers, and administrators.Optimized call latency by 35% through codec prioritization and bitrate tuning, enhancing user experience.",
+      title: "GehuTV - College Video Chat Platform",
+      description: "Built real-time peer-to-peer video chat platform using WebRTC with random matching, serving 200+ concurrent users.Optimized connection latency by 35\% through codec prioritization and STUN server configuration for reliable peer discovery across NAT networks.",
       tech: ["React.js", "WebRTC","Node.js", "Express.js", "MongoDB", "JWT", "Socket.IO"],
-      link: "https://github.com/Gagankainthola/telelegal",
-      github: "https://github.com/Gagankainthola/telelegal"
+      link: "https://gehu-tv.vercel.app/",
+      github: "https://github.com/Gagankainthola/gehu_tv"
     }
   ];
 
@@ -128,6 +128,45 @@ function App() {
           </div>
         </div>
       </section>
+         <section id="experience" className="py-32 px-6 bg-gradient-to-b from-black via-gray-900/50 to-black">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center gap-4 mb-16">
+            <h2 className="text-5xl font-bold">Experience</h2>
+            <div className="flex-1 h-px bg-gradient-to-r from-red-600/50 to-transparent"></div>
+          </div>
+
+          <div className="space-y-8">
+            {internships.map((internship, index) => (
+              <div
+                key={index}
+                className="relative pl-8 border-l-2 border-red-600/30 hover:border-red-600 transition-colors"
+              >
+                <div className="absolute left-[-9px] top-0 w-4 h-4 bg-red-600 rotate-45"></div>
+
+                <div className="bg-black/50 border border-red-600/20 p-8 hover:border-red-600/50 transition-all">
+                  <div className="flex flex-wrap justify-between items-start mb-4">
+                    <div>
+                      <h3 className="text-2xl font-bold text-red-600 mb-1">
+                        {internship.role}
+                      </h3>
+                      <h4 className="text-xl text-gray-300">
+                        {internship.company}
+                      </h4>
+                    </div>
+                    <span className="text-gray-500 font-mono">
+                      {internship.period}
+                    </span>
+                  </div>
+
+                  <p className="text-gray-400 leading-relaxed">
+                    {internship.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section id="projects" className="py-32 px-6">
         <div className="max-w-7xl mx-auto">
@@ -187,45 +226,7 @@ function App() {
         </div>
       </section>
 
-      <section id="experience" className="py-32 px-6 bg-gradient-to-b from-black via-gray-900/50 to-black">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex items-center gap-4 mb-16">
-            <h2 className="text-5xl font-bold">Experience</h2>
-            <div className="flex-1 h-px bg-gradient-to-r from-red-600/50 to-transparent"></div>
-          </div>
-
-          <div className="space-y-8">
-            {internships.map((internship, index) => (
-              <div
-                key={index}
-                className="relative pl-8 border-l-2 border-red-600/30 hover:border-red-600 transition-colors"
-              >
-                <div className="absolute left-[-9px] top-0 w-4 h-4 bg-red-600 rotate-45"></div>
-
-                <div className="bg-black/50 border border-red-600/20 p-8 hover:border-red-600/50 transition-all">
-                  <div className="flex flex-wrap justify-between items-start mb-4">
-                    <div>
-                      <h3 className="text-2xl font-bold text-red-600 mb-1">
-                        {internship.role}
-                      </h3>
-                      <h4 className="text-xl text-gray-300">
-                        {internship.company}
-                      </h4>
-                    </div>
-                    <span className="text-gray-500 font-mono">
-                      {internship.period}
-                    </span>
-                  </div>
-
-                  <p className="text-gray-400 leading-relaxed">
-                    {internship.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+   
 
       <section id="tech" className="py-32 px-6">
         <div className="max-w-7xl mx-auto">
